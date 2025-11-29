@@ -33,9 +33,9 @@
 
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Лёгкие дополнительные стили именно для этой главной страницы -->
+    <!-- Дополнительные стили именно для главной страницы -->
     <style>
-        /* Обёртка правой части hero (фото + карточка) */
+        /* Правая колонка hero (фото + карточка проекта) */
         .hero-aside {
             display: flex;
             flex-direction: column;
@@ -94,17 +94,6 @@
             transform: scale(1.03);
         }
 
-        .hero-photo-meta {
-            text-align: center;
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .hero-photo-meta strong {
-            color: var(--text-main);
-            font-size: 15px;
-        }
-
         .hero-photo-tag {
             display: inline-flex;
             align-items: center;
@@ -128,7 +117,53 @@
             background: #22c55e;
         }
 
-        /* Лёгкая анимация появления для hero */
+        /* Подпись под фото — цвет имени и отступы */
+        .hero-photo-meta {
+            margin-top: 4px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .hero-photo-meta p {
+            margin: 0 0 2px 0;
+        }
+
+        .hero-photo-meta p:last-child {
+            margin-bottom: 0;
+        }
+
+        .hero-photo-meta strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #f9fafb; /* более светлый цвет имени под фото */
+        }
+
+        /* Карточка активного проекта — воздух и отступы */
+        .hero-aside .card-gradient {
+            padding: 20px 22px 18px;
+        }
+
+        .hero-aside .card-gradient .pill {
+            margin-bottom: 10px;
+        }
+
+        .hero-aside .card-gradient .card-title {
+            margin: 0 0 8px 0;
+        }
+
+        .hero-aside .card-gradient .card-text {
+            margin: 0 0 10px 0;
+        }
+
+        .hero-aside .card-gradient .card-list {
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+
+        /* Лёгкая анимация появления hero */
         @keyframes heroFadeUp {
             from {
                 opacity: 0;
@@ -149,7 +184,6 @@
             animation-delay: 0.05s;
         }
 
-        /* Чуть уменьшить мини-карточку-статистику на маленьких экранах */
         @media (max-width: 640px) {
             .hero-main .card.card-soft {
                 margin-top: 14px;
@@ -181,12 +215,11 @@
             <div class="hero-main">
                 <p class="eyebrow">Портфолио разработчика</p>
                 <h1 class="hero-title">
-                    Создаю понятные<br>цифровые интерфейсы.
+                    цифровые интерфейсы.
                 </h1>
                 <p class="hero-subtitle">
-                    Я занимаюсь веб-разработкой: верстаю аккуратные интерфейсы,
-                    пишу логику и внимательно отношусь к структуре проектов и Git-истории.
-                    Цель — продукты, которыми удобно пользоваться и приятно поддерживать.
+                    Я занимаюсь веб-разработкой: верстаю аккуратные интерфейсы, пишу логику и внимательно отношусь
+                    к структуре проектов и Git-истории. Цель — продукты, которыми удобно пользоваться и приятно поддерживать.
                 </p>
 
                 <!-- Стек в виде чипсов -->
@@ -221,14 +254,14 @@
                 </div>
             </div>
 
-            <!-- ПРАВАЯ ЧАСТЬ: твоё фото + карточка-описание сайта -->
+            <!-- ПРАВАЯ ЧАСТЬ: фото + карточка активного проекта -->
             <aside class="hero-aside">
                 <!-- Фото -->
                 <div class="hero-photo-card">
                     <div class="hero-photo-tag">Это я</div>
                     <div class="hero-photo-ring">
                         <div class="hero-photo-ring-inner">
-                            <img src="avatar.JPG" alt="Фото разработчика">
+                            <img src="avatar.JPG" alt="Фото разработчика Поливаева Дмитрия">
                         </div>
                     </div>
                     <div class="hero-photo-meta">
@@ -242,8 +275,8 @@
                     <p class="pill">Активный проект</p>
                     <h2 class="card-title">Личный портфолио-сайт</h2>
                     <p class="card-text">
-                        Небольшой сайт-портфолио в блочном стиле: несколько страниц,
-                        аккуратный дизайн, адаптивный layout и развёртывание на GitHub Pages.
+                        Небольшой сайт-портфолио в блочном стиле: несколько страниц, аккуратный дизайн,
+                        адаптивный layout и развёртывание на GitHub Pages.
                     </p>
                     <ul class="card-list">
                         <li>Современный блочный дизайн и мягкие тени</li>
@@ -328,7 +361,7 @@
                             <h3>1. Формулирую задачу</h3>
                             <p>
                                 Понимаю, кто пользователи, какая цель проекта, какие ограничения по срокам
-                                и функционалу, какие есть зависимости.
+                                и функционалу, какие есть зависимости и риски.
                             </p>
                         </div>
                     </div>
@@ -361,11 +394,11 @@
 
 <footer class="site-footer">
     <div class="container footer-inner">
-        <p class="footer-copy">&copy; <span id="year"></span> Поливаев Дмитрий Дмитриевич | ИКБО-25-22</p>
+        <p class="footer-copy">&copy; <span id="year"></span> Поливаев Дмитрий</p>
         <p class="footer-links">
             <a href="mailto:you@example.com">dmitrii@d-pl.ru</a>
             <span class="footer-divider">•</span>
-            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/dplvv" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
     </div>
 </footer>
