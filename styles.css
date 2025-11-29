@@ -361,8 +361,8 @@ img {
 }
 
 .profile-photo img {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     object-fit: cover;
 }
