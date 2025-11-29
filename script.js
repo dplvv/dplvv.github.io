@@ -1,4 +1,3 @@
-// Устанавливаем текущий год в футере
 document.addEventListener("DOMContentLoaded", function () {
     var yearSpan = document.getElementById("year");
     if (yearSpan) {
