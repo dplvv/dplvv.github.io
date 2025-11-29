@@ -4,94 +4,121 @@
     <meta charset="UTF-8">
     <title>Проекты — Портфолио разработчика</title>
 
-    <!-- Базовое SEO -->
     <meta name="description" content="Подборка моих учебных и коммерческих проектов в веб-разработке.">
     <meta name="keywords" content="проекты, портфолио, веб-разработка, pet-projects, case studies">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Твоё Имя">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
 
-    <!-- Цвет -->
-    <meta name="theme-color" content="#222222">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Проекты — Портфолио разработчика">
     <meta property="og:description" content="Список моих проектов с кратким описанием и ссылками.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://username.github.io/projects.html">
     <meta property="og:image" content="https://username.github.io/img/projects-preview.png">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Проекты — Портфолио разработчика">
     <meta name="twitter:description" content="Список моих проектов с кратким описанием и ссылками.">
     <meta name="twitter:image" content="https://username.github.io/img/projects-preview.png">
 
-    <!-- Канонический URL -->
     <link rel="canonical" href="https://username.github.io/projects.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
-    <div class="container">
-        <h1 class="site-title">Мои проекты</h1>
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Твоё Имя</a>
         <nav class="site-nav">
-            <a href="index.html">Главная</a>
-            <a href="about.html">О себе</a>
-            <a href="projects.html">Проекты</a>
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О себе</a>
+            <a href="projects.html" class="nav-link nav-link-active">Проекты</a>
         </nav>
     </div>
 </header>
 
-<main class="container">
-    <section class="projects">
-        <h2>Подборка проектов</h2>
-        <ul class="projects-list">
-            <li class="project-item">
-                <h3>Проект 1: Название проекта</h3>
-                <p>
-                    Краткое описание проекта: что делает, какие технологии используются,
-                    какую задачу решает.
+<main>
+    <section class="section section-top">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Мои проекты</h1>
+                <p class="section-subtitle">
+                    Здесь собраны примеры работ: от учебных pet-projects до более серьёзных задач.
                 </p>
-                <p>
-                    <a href="https://github.com/username/project1" target="_blank" rel="noopener noreferrer">
-                        Репозиторий на GitHub
-                    </a>
-                    <!-- при желании: <a href="https://project1-demo.example" target="_blank" rel="noopener noreferrer">Демо</a> -->
-                </p>
-            </li>
+            </div>
 
-            <li class="project-item">
-                <h3>Проект 2: Название проекта</h3>
-                <p>
-                    Ещё один проект (например, учебный или боевой). Можно кратко расписать стек и результат.
-                </p>
-                <p>
-                    <a href="https://github.com/username/project2" target="_blank" rel="noopener noreferrer">
-                        Репозиторий на GitHub
-                    </a>
-                </p>
-            </li>
+            <div class="grid-3">
+                <article class="card project-card">
+                    <p class="project-tag">Frontend</p>
+                    <h2 class="card-title">Landing-page продукта</h2>
+                    <p class="card-text">
+                        Одностраничный сайт с адаптивным layout’ом, плавной анимацией и
+                        аккуратной типографикой. Сверстан по макету из Figma.
+                    </p>
+                    <p class="project-meta">
+                        HTML · CSS · JS
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/username/project1" target="_blank" rel="noopener noreferrer">
+                            Репозиторий
+                        </a>
+                    </div>
+                </article>
 
-            <li class="project-item">
-                <h3>Проект 3: Название проекта</h3>
-                <p>
-                    Любой pet-project или курсовая работа, которой ты гордишься.
-                </p>
-                <p>
-                    <a href="https://github.com/username/project3" target="_blank" rel="noopener noreferrer">
-                        Репозиторий на GitHub
-                    </a>
-                </p>
-            </li>
-        </ul>
+                <article class="card project-card">
+                    <p class="project-tag">Fullstack</p>
+                    <h2 class="card-title">Простое To-Do приложение</h2>
+                    <p class="card-text">
+                        Список задач с сохранением данных, фильтрацией и базовой логикой по приоритетам.
+                        Хороший пример работы с состоянием и структурой проекта.
+                    </p>
+                    <p class="project-meta">
+                        HTML · CSS · JS (или другой стек, впиши свой)
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/username/project2" target="_blank" rel="noopener noreferrer">
+                            Репозиторий
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <p class="project-tag">Учебный</p>
+                    <h2 class="card-title">Портфолио-сайт</h2>
+                    <p class="card-text">
+                        Текущий сайт: несколько страниц, аккуратный дизайн, SEO-теги,
+                        развёртывание через GitHub Pages и работа с Git.
+                    </p>
+                    <p class="project-meta">
+                        HTML · CSS · JS · GitHub Pages
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/username/username.github.io" target="_blank" rel="noopener noreferrer">
+                            Репозиторий
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 </main>
 
 <footer class="site-footer">
-    <div class="container">
-        <p>&copy; <span id="year"></span> Твоё Имя. Все права защищены.</p>
+    <div class="container footer-inner">
+        <p class="footer-copy">&copy; <span id="year"></span> Поливаев Дмитрий Дмитриевич | ИКБО-25-22</p>
+        <p class="footer-links">
+            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="footer-divider">•</span>
+            <a href="mailto:you@example.com">dmitrii@d-pl.ru</a>
+        </p>
     </div>
 </footer>
 
