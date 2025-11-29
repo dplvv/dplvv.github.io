@@ -2,122 +2,109 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Портфолио разработчика</title>
+    <title>О себе — Портфолио разработчика</title>
 
-    <!-- Базовое SEO -->
-    <meta name="description" content="Личное портфолио веб-разработчика: проекты, навыки и контакты.">
-    <meta name="keywords" content="портфолио, веб-разработчик, frontend, backend, проекты">
+    <meta name="description" content="Подробнее обо мне: опыт, стек технологий и подход к разработке.">
+    <meta name="keywords" content="о себе, разработчик, опыт, навыки, стек технологий">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Твоё Имя">
+    <meta name="author" content="Поливаев Дмитрий">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f5f5f7">
 
-    <!-- Цвет для мобильных браузеров -->
-    <meta name="theme-color" content="#0f172a">
+    <meta property="og:title" content="О себе — Портфолио разработчика">
+    <meta property="og:description" content="Кто я, чем занимаюсь и какие технологии использую.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://username.github.io/about.html">
+    <meta property="og:image" content="https://username.github.io/img/avatar.webp">
 
-    <!-- Open Graph (для соцсетей) -->
-    <meta property="og:title" content="Портфолио разработчика">
-    <meta property="og:description" content="Мои проекты, навыки и опыт в веб-разработке.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://username.github.io/">
-    <meta property="og:image" content="https://username.github.io/img/preview.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="О себе — Портфолио разработчика">
+    <meta name="twitter:description" content="Кто я, чем занимаюсь и какие технологии использую.">
+    <meta name="twitter:image" content="https://username.github.io/img/avatar.webp">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Портфолио разработчика">
-    <meta name="twitter:description" content="Мои проекты, навыки и опыт в веб-разработке.">
-    <meta name="twitter:image" content="https://username.github.io/img/preview.png">
+    <link rel="canonical" href="https://username.github.io/about.html">
 
-    <!-- Канонический URL -->
-    <link rel="canonical" href="https://username.github.io/">
-
-    <!-- Красивый шрифт (опционально) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <style>
+        @supports (font: -apple-system-body) {
+            :root { font: -apple-system-body; }
+        }
+    </style>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header">
+<header class="site-header site-header--light">
     <div class="container header-inner">
         <a href="index.html" class="logo">Твоё Имя</a>
         <nav class="site-nav">
-            <a href="index.html" class="nav-link nav-link-active">Главная</a>
-            <a href="about.html" class="nav-link">О себе</a>
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link nav-link-active">О себе</a>
             <a href="projects.html" class="nav-link">Проекты</a>
         </nav>
+        <div class="header-meta">
+            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" class="header-link">
+                GitHub
+            </a>
+        </div>
     </div>
 </header>
 
 <main>
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-text">
-                <p class="hero-tag">Web / Frontend / Backend</p>
-                <h1 class="hero-title">Привет! Я — веб-разработчик</h1>
+    <section class="section section-tight">
+        <div class="container about-layout">
+            <div class="about-main">
+                <p class="hero-eyebrow">Обо мне</p>
+                <h1 class="hero-title hero-title-small">
+                    Разработчик, который думает о продукте, а не только о коде.
+                </h1>
                 <p class="hero-subtitle">
-                    Делаю аккуратные интерфейсы, продуманные пользовательские сценарии
-                    и поддерживаемый код. Здесь можно посмотреть мои проекты и познакомиться поближе.
+                    Мне важно, чтобы интерфейс был понятным, а реализация — поддерживаемой.
+                    Я люблю аккуратные макеты, чистую типографику и логичную структуру проекта.
                 </p>
 
-                <div class="hero-actions">
-                    <a href="projects.html" class="btn btn-primary">Смотреть проекты</a>
-                    <a href="about.html" class="btn btn-ghost">Узнать обо мне</a>
+                <div class="about-grid">
+                    <article class="card card-soft">
+                        <h2 class="card-title">Подход к работе</h2>
+                        <p class="card-text">
+                            Начинаю с понимания задачи: что нужно пользователю и бизнесу.
+                            Потом уже выбираю инструменты, архитектуру и подход к реализации.
+                        </p>
+                    </article>
+                    <article class="card card-soft">
+                        <h2 class="card-title">Интересы</h2>
+                        <p class="card-text">
+                            Веб-разработка, UX, управление проектами, автоматизация рутины и аккуратная работа с Git.
+                        </p>
+                    </article>
                 </div>
             </div>
 
-            <div class="hero-card">
-                <div class="hero-card-badge">Сейчас в работе</div>
-                <h2 class="hero-card-title">Личный портфолио-сайт</h2>
-                <p class="hero-card-text">
-                    Минималистичный сайт на HTML, CSS и JavaScript с развёртыванием на GitHub Pages.
-                </p>
-                <ul class="hero-card-list">
-                    <li>Адаптивный layout</li>
-                    <li>Чистый и понятный код</li>
-                    <li>Оптимизация по SEO</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <aside class="about-side">
+                <div class="profile-card">
+                    <div class="profile-photo">
+                        <picture>
+                            <source srcset="img/avatar.webp" type="image/webp">
+                            <img src="img/avatar.png" alt="Фото разработчика" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="profile-meta">
+                        <p class="profile-name">Твоё Имя</p>
+                        <p class="profile-role">Web-разработчик</p>
+                        <p class="profile-note">HTML · CSS · JavaScript · Git · GitHub</p>
+                    </div>
+                </div>
 
-    <section class="section">
-        <div class="container section-inner">
-            <div class="section-header">
-                <h2 class="section-title">Что я умею</h2>
-                <p class="section-subtitle">
-                    Основные направления, с которыми я работаю.
-                </p>
-            </div>
-
-            <div class="grid-3">
-                <article class="card">
-                    <h3 class="card-title">Frontend</h3>
-                    <p class="card-text">
-                        Вёрстка на HTML5/CSS3, адаптивный дизайн, интерактив через JavaScript.
-                        Работаю с макетами и люблю пиксель-перфект, когда это оправдано.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3 class="card-title">Backend</h3>
-                    <p class="card-text">
-                        Базовые REST-API, работа с данными, авторизация/аутентификация.
-                        Стек можно подправить под реальные технологии, с которыми ты работаешь.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3 class="card-title">Git & GitHub</h3>
-                    <p class="card-text">
-                        Ветки, pull-requests, code review. Умею поддерживать репозитории в
-                        чистоте: понятные коммиты, осмысленная история, работа с issue.
-                    </p>
-                </article>
-            </div>
+                <div class="skills-block">
+                    <h2 class="skills-title">Технологии</h2>
+                    <ul class="skill-list">
+                        <li>HTML5, современный семантический подход</li>
+                        <li>CSS3, Flexbox и Grid</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Git и GitHub, работа с ветками</li>
+                        <li>Работа с макетами (Figma и др.)</li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </section>
 </main>
@@ -126,9 +113,9 @@
     <div class="container footer-inner">
         <p class="footer-copy">&copy; <span id="year"></span> Поливаев Дмитрий Дмитриевич | ИКБО-25-22</p>
         <p class="footer-links">
-            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <span class="footer-divider">•</span>
             <a href="mailto:you@example.com">dmitrii@d-pl.ru</a>
+            <span class="footer-divider">•</span>
+            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
     </div>
 </footer>
