@@ -2,47 +2,48 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>dplvv</title>
+    <title>Поливаев Дмитрий</title>
 
-    <meta name="description" content="Подробнее обо мне: опыт, стек технологий и подход к разработке.">
-    <meta name="keywords" content="о себе, разработчик, опыт, навыки, стек технологий">
+    <meta name="description" content="Личное портфолио веб-разработчика: проекты, навыки и подход к работе.">
+    <meta name="keywords" content="портфолио, веб-разработчик, frontend, backend, проекты">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Поливаев Дмитрий">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#f5f5f7">
+    <meta name="theme-color" content="#0f172a">
 
-    <meta property="og:title" content="О себе — Портфолио разработчика">
-    <meta property="og:description" content="Кто я, чем занимаюсь и какие технологии использую.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://username.github.io/about.html">
-    <meta property="og:image" content="https://username.github.io/img/avatar.webp">
+    <meta property="og:title" content="Портфолио разработчика">
+    <meta property="og:description" content="Мои проекты, навыки и опыт в веб-разработке.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dplvv.github.io/">
+    <meta property="og:image" content="https://dplvv.github.io/img/preview.png">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="О себе — Портфолио разработчика">
-    <meta name="twitter:description" content="Кто я, чем занимаюсь и какие технологии использую.">
-    <meta name="twitter:image" content="https://username.github.io/img/avatar.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Портфолио разработчика">
+    <meta name="twitter:description" content="Мои проекты, навыки и опыт в веб-разработке.">
+    <meta name="twitter:image" content="https://dplvv.github.io/img/preview.png">
 
-    <link rel="canonical" href="https://username.github.io/about.html">
+    <link rel="canonical" href="https://dplvv.github.io/">
 
-    <style>
-        @supports (font: -apple-system-body) {
-            :root { font: -apple-system-body; }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header site-header--light">
+<header class="site-header">
     <div class="container header-inner">
         <a href="index.html" class="logo">Поливаев Дмитрий</a>
         <nav class="site-nav">
-            <a href="index.html" class="nav-link">Главная</a>
-            <a href="about.html" class="nav-link nav-link-active">О себе</a>
+            <a href="index.html" class="nav-link nav-link-active">Главная</a>
+            <a href="about.html" class="nav-link">О себе</a>
             <a href="projects.html" class="nav-link">Проекты</a>
         </nav>
         <div class="header-meta">
-            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" class="header-link">
+            <a href="https://github.com/dplvv" target="_blank" rel="noopener noreferrer" class="header-link">
                 GitHub
             </a>
         </div>
@@ -50,61 +51,169 @@
 </header>
 
 <main>
-    <section class="section section-tight">
-        <div class="container about-layout">
-            <div class="about-main">
-                <p class="hero-eyebrow">Обо мне</p>
-                <h1 class="hero-title hero-title-small">
-                    Разработчик, который думает о продукте, а не только о коде.
+    <!-- БЛОК 1: Hero + стек + мини-статистика -->
+    <section class="block block-hero">
+        <div class="container block-inner hero-layout">
+            <div class="hero-main">
+                <p class="eyebrow">Портфолио разработчика</p>
+                <h1 class="hero-title">
+                    Создаю понятные<br>цифровые интерфейсы.
                 </h1>
                 <p class="hero-subtitle">
-                    Мне важно, чтобы интерфейс был понятным, а реализация — поддерживаемой.
-                    Я люблю аккуратные макеты, чистую типографику и логичную структуру проекта.
+                    Я занимаюсь веб-разработкой: от аккуратной вёрстки и простых интерфейсов
+                    до логики и работы с Git. Мне важны чистая структура, читаемый код
+                    и комфорт пользователя.
                 </p>
 
-                <div class="about-grid">
-                    <article class="card card-soft">
-                        <h2 class="card-title">Подход к работе</h2>
-                        <p class="card-text">
-                            Начинаю с понимания задачи: что нужно пользователю и бизнесу.
-                            Потом уже выбираю инструменты, архитектуру и подход к реализации.
-                        </p>
-                    </article>
-                    <article class="card card-soft">
-                        <h2 class="card-title">Интересы</h2>
-                        <p class="card-text">
-                            Веб-разработка, UX, управление проектами, автоматизация рутины и аккуратная работа с Git.
-                        </p>
-                    </article>
+                <!-- Стек в виде чипсов -->
+                <div class="chips" style="margin: 6px 0 16px 0;">
+                    <span class="chip">HTML5</span>
+                    <span class="chip">CSS3 · Flex · Grid</span>
+                    <span class="chip">JavaScript (ES6+)</span>
+                    <span class="chip">Git / GitHub</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">Смотреть проекты</a>
+                    <a href="about.html" class="btn btn-ghost">Узнать обо мне</a>
+                </div>
+
+                <!-- Мини-статистика, оформленная как карточка -->
+                <div class="card card-soft" style="margin-top: 18px;">
+                    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 13px;">
+                        <div>
+                            <div style="color: var(--text-muted); margin-bottom: 2px;">Направление</div>
+                            <div style="font-weight: 600;">Web-разработка</div>
+                        </div>
+                        <div>
+                            <div style="color: var(--text-muted); margin-bottom: 2px;">Фокус</div>
+                            <div style="font-weight: 600;">UX + код</div>
+                        </div>
+                        <div>
+                            <div style="color: var(--text-muted); margin-bottom: 2px;">Инструменты</div>
+                            <div style="font-weight: 600;">HTML · CSS · JS · Git</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <aside class="about-side">
-                <div class="profile-card">
-                    <div class="profile-photo">
-                        <picture>
-                            <source srcset="avatar.JPG" type="image/webp">
-                            <img src="avatar.JPG" alt="Фото разработчика" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="profile-meta">
-                        <p class="profile-name">Поливаев Дмитрий</p>
-                        <p class="profile-role">Web-разработчик</p>
-                        <p class="profile-note">HTML · CSS · JavaScript · Git · GitHub</p>
-                    </div>
-                </div>
+            <!-- Правая карточка-акцент -->
+            <div class="hero-side card card-gradient">
+                <p class="pill">Активный проект</p>
+                <h2 class="card-title">Личный портфолио-сайт</h2>
+                <p class="card-text">
+                    Небольшой сайт в блочном стиле: несколько разделов, адаптивный layout,
+                    аккуратная типографика и развёртывание на GitHub Pages.
+                </p>
+                <ul class="card-list">
+                    <li>Современный блочный дизайн и мягкие тени</li>
+                    <li>Разделы «Главная», «О себе», «Проекты»</li>
+                    <li>SEO-теги и структурированный код</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <div class="skills-block">
-                    <h2 class="skills-title">Технологии</h2>
-                    <ul class="skill-list">
-                        <li>HTML5, современный семантический подход</li>
-                        <li>CSS3, Flexbox и Grid</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Git и GitHub, работа с ветками</li>
-                        <li>Работа с макетами (Figma и др.)</li>
+    <!-- БЛОК 2: Три больших блока-навыка -->
+    <section class="block block-muted">
+        <div class="container block-inner">
+            <header class="block-header">
+                <h2 class="block-title">Чем я занимаюсь</h2>
+                <p class="block-subtitle">
+                    Несколько ключевых направлений, вокруг которых строятся мои проекты.
+                </p>
+            </header>
+
+            <div class="grid grid-3">
+                <article class="card card-soft">
+                    <h3 class="card-title">Frontend</h3>
+                    <p class="card-text">
+                        Верстаю чистые интерфейсы, продумываю блочную структуру страниц,
+                        использую Flexbox и Grid, делаю адаптивность для разных экранов.
+                    </p>
+                    <ul class="card-list" style="margin-top: 8px;">
+                        <li>Семантический HTML5</li>
+                        <li>Современный CSS3</li>
+                        <li>Аккуратная типографика</li>
                     </ul>
+                </article>
+
+                <article class="card card-soft">
+                    <h3 class="card-title">Логика и структура</h3>
+                    <p class="card-text">
+                        Строю простую и понятную архитектуру в небольших проектах,
+                        разделяю ответственность, слежу за читаемостью кода и понятными именами.
+                    </p>
+                    <ul class="card-list" style="margin-top: 8px;">
+                        <li>Читаемый JS-код</li>
+                        <li>Минимальная сложность</li>
+                        <li>Файловая структура по смыслу</li>
+                    </ul>
+                </article>
+
+                <article class="card card-soft">
+                    <h3 class="card-title">Git & GitHub</h3>
+                    <p class="card-text">
+                        Работаю с ветками, pull-request’ами и код-ревью.
+                        Стараюсь вести историю коммитов так, чтобы в ней было легко ориентироваться.
+                    </p>
+                    <ul class="card-list" style="margin-top: 8px;">
+                        <li>Понятные сообщения коммитов</li>
+                        <li>Чистые ветки и слияния</li>
+                        <li>Репозитории как документация</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 3: Подход к работе (таймлайн) -->
+    <section class="block">
+        <div class="container block-inner">
+            <header class="block-header block-header-inline">
+                <div>
+                    <h2 class="block-title">Как я веду проекты</h2>
+                    <p class="block-subtitle">
+                        Простая последовательность шагов помогает делать работу предсказуемой.
+                    </p>
                 </div>
-            </aside>
+            </header>
+
+            <div class="card card-soft">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <h3>1. Определяю задачу</h3>
+                            <p>
+                                Формулирую цель, целевую аудиторию и ограничивающие факторы:
+                                сроки, объём, окружение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <h3>2. Проектирую структуру</h3>
+                            <p>
+                                Разбиваю интерфейс на блоки, продумываю навигацию, сценарии использования
+                                и базовую архитектуру кода.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <h3>3. Реализую и довожу до polish</h3>
+                            <p>
+                                Верстаю, пишу логику, проверяю адаптив и вычищаю мелочи:
+                                выравнивание, состояния элементов, историю коммитов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
