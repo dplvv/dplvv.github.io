@@ -4,82 +4,120 @@
     <meta charset="UTF-8">
     <title>О себе — Портфолио разработчика</title>
 
-    <!-- Базовое SEO -->
     <meta name="description" content="Подробнее обо мне: опыт, стек технологий и интересы в разработке.">
     <meta name="keywords" content="о себе, разработчик, опыт, навыки, стек технологий">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Твоё Имя">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
 
-    <!-- Цвет для мобильных -->
-    <meta name="theme-color" content="#222222">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="О себе — Портфолио разработчика">
     <meta property="og:description" content="Кто я, чем занимаюсь и какие технологии использую.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://username.github.io/about.html">
     <meta property="og:image" content="https://username.github.io/img/avatar.webp">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="О себе — Портфолио разработчика">
     <meta name="twitter:description" content="Кто я, чем занимаюсь и какие технологии использую.">
     <meta name="twitter:image" content="https://username.github.io/img/avatar.webp">
 
-    <!-- Канонический URL -->
     <link rel="canonical" href="https://username.github.io/about.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
-    <div class="container">
-        <h1 class="site-title">О себе</h1>
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Твоё Имя</a>
         <nav class="site-nav">
-            <a href="index.html">Главная</a>
-            <a href="about.html">О себе</a>
-            <a href="projects.html">Проекты</a>
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link nav-link-active">О себе</a>
+            <a href="projects.html" class="nav-link">Проекты</a>
         </nav>
     </div>
 </header>
 
-<main class="container">
-    <section class="about">
-        <div class="about-text">
-            <h2>Кто я</h2>
-            <p>
-                Я веб-разработчик, который занимается созданием удобных и понятных интерфейсов,
-                а также разработкой серверной части приложений.
-            </p>
-            <p>
-                Интересуюсь архитектурой приложений, фронтендом, бэкендом и автоматизацией процессов разработки.
-            </p>
-        </div>
+<main>
+    <section class="section section-top">
+        <div class="container about-inner">
+            <div class="about-text">
+                <p class="hero-tag">Обо мне</p>
+                <h1 class="hero-title">Я — разработчик, который любит понятные продукты</h1>
+                <p class="hero-subtitle">
+                    Мне нравится превращать идеи в работающие интерфейсы и сервисы. В работе
+                    ценю простоту для пользователя и предсказуемость для команды разработки.
+                </p>
 
-        <div class="about-photo">
-            <picture>
-                <source srcset="img/avatar.webp" type="image/webp">
-                <img src="img/avatar.png" alt="Фото разработчика" loading="lazy">
-            </picture>
+                <div class="about-grid">
+                    <div class="about-block">
+                        <h3 class="card-title">Подход</h3>
+                        <p class="card-text">
+                            Пишу читаемый код, думаю о поддержке и масштабировании.
+                            Люблю разбираться в требованиях и структуре проекта, а не только «делать кнопки».
+                        </p>
+                    </div>
+                    <div class="about-block">
+                        <h3 class="card-title">Интересы</h3>
+                        <p class="card-text">
+                            Веб-разработка, проектирование интерфейсов, продуктивность разработчика,
+                            автоматизация рутины и работа с Git как основным инструментом.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-photo-card">
+                <div class="about-photo-wrapper">
+                    <picture>
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <img src="img/avatar.png" alt="Фото разработчика" loading="lazy">
+                    </picture>
+                </div>
+                <div class="about-photo-meta">
+                    <p><strong>Твоё Имя</strong></p>
+                    <p>Web-разработчик</p>
+                    <p>HTML · CSS · JS · Git · GitHub</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="skills">
-        <h2>Навыки</h2>
-        <ul>
-            <li>HTML5, CSS3, адаптивная вёрстка</li>
-            <li>JavaScript (ES6+), работа с DOM, базовый React/Vue (по желанию впиши своё)</li>
-            <li>Git, GitHub, работа с ветками и pull request’ами</li>
-            <li>Основы бэкенда (Node.js / другой стек — впиши свой)</li>
-            <li>Работа с макетами (Figma или др.)</li>
-        </ul>
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Технологии</h2>
+                <p class="section-subtitle">
+                    Осознанно использую инструменты и постепенно расширяю стек.
+                </p>
+            </div>
+            <div class="chips">
+                <span class="chip">HTML5</span>
+                <span class="chip">CSS3 (Flex, Grid)</span>
+                <span class="chip">JavaScript (ES6+)</span>
+                <span class="chip">Git / GitHub</span>
+                <span class="chip">Адаптивная вёрстка</span>
+                <span class="chip">Работа с макетами</span>
+            </div>
+        </div>
     </section>
 </main>
 
 <footer class="site-footer">
-    <div class="container">
-        <p>&copy; <span id="year"></span> Твоё Имя. Все права защищены.</p>
+    <div class="container footer-inner">
+        <p class="footer-copy">&copy; <span id="year"></span> Твоё Имя</p>
+        <p class="footer-links">
+            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="footer-divider">•</span>
+            <a href="mailto:you@example.com">dmitrii@d-pl.ru</a>
+        </p>
     </div>
 </footer>
 
