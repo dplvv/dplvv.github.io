@@ -15,12 +15,12 @@
     <meta property="og:description" content="Мои проекты, навыки и опыт в веб-разработке.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dplvv.github.io/">
-    <meta property="og:image" content="https://dplvv.github.io/img/preview.png">
+    <meta property="og:image" content="https://dplvv.github.io/img/avatar.JPG">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Портфолио разработчика">
     <meta name="twitter:description" content="Мои проекты, навыки и опыт в веб-разработке.">
-    <meta name="twitter:image" content="https://dplvv.github.io/img/preview.png">
+    <meta name="twitter:image" content="https://dplvv.github.io/img/avatar.JPG">
 
     <link rel="canonical" href="https://dplvv.github.io/">
 
@@ -32,6 +32,130 @@
     >
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Лёгкие дополнительные стили именно для этой главной страницы -->
+    <style>
+        /* Обёртка правой части hero (фото + карточка) */
+        .hero-aside {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            height: 100%;
+        }
+
+        /* Блок с фото */
+        .hero-photo-card {
+            position: relative;
+            border-radius: 24px;
+            padding: 12px;
+            background:
+                radial-gradient(circle at top left, rgba(56, 189, 248, 0.35), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.35), transparent 55%),
+                #020617;
+            border: 1px solid rgba(148, 163, 184, 0.55);
+            box-shadow: 0 22px 55px rgba(15, 23, 42, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-photo-ring {
+            position: relative;
+            width: 168px;
+            height: 168px;
+            border-radius: 999px;
+            padding: 3px;
+            background: conic-gradient(
+                from 180deg,
+                rgba(56, 189, 248, 0.15),
+                rgba(129, 140, 248, 0.9),
+                rgba(56, 189, 248, 0.6),
+                rgba(56, 189, 248, 0.15)
+            );
+            margin-bottom: 10px;
+        }
+
+        .hero-photo-ring-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 999px;
+            background: radial-gradient(circle at top, #020617, #020617 55%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-photo-ring-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.03);
+        }
+
+        .hero-photo-meta {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .hero-photo-meta strong {
+            color: var(--text-main);
+            font-size: 15px;
+        }
+
+        .hero-photo-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background-color: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .hero-photo-tag::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        /* Лёгкая анимация появления для hero */
+        @keyframes heroFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-main,
+        .hero-aside {
+            animation: heroFadeUp 0.7s ease-out forwards;
+        }
+
+        .hero-aside {
+            animation-delay: 0.05s;
+        }
+
+        /* Чуть уменьшить мини-карточку-статистику на маленьких экранах */
+        @media (max-width: 640px) {
+            .hero-main .card.card-soft {
+                margin-top: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
 <header class="site-header">
@@ -51,7 +175,7 @@
 </header>
 
 <main>
-    <!-- БЛОК 1: Hero + стек + мини-статистика -->
+    <!-- БЛОК 1: Hero — текст + стек + мини-статистика -->
     <section class="block block-hero">
         <div class="container block-inner hero-layout">
             <div class="hero-main">
@@ -60,9 +184,9 @@
                     Создаю понятные<br>цифровые интерфейсы.
                 </h1>
                 <p class="hero-subtitle">
-                    Я занимаюсь веб-разработкой: от аккуратной вёрстки и простых интерфейсов
-                    до логики и работы с Git. Мне важны чистая структура, читаемый код
-                    и комфорт пользователя.
+                    Я занимаюсь веб-разработкой: верстаю аккуратные интерфейсы,
+                    пишу логику и внимательно отношусь к структуре проектов и Git-истории.
+                    Цель — продукты, которыми удобно пользоваться и приятно поддерживать.
                 </p>
 
                 <!-- Стек в виде чипсов -->
@@ -78,49 +202,66 @@
                     <a href="about.html" class="btn btn-ghost">Узнать обо мне</a>
                 </div>
 
-                <!-- Мини-статистика, оформленная как карточка -->
+                <!-- Мини-статистика -->
                 <div class="card card-soft" style="margin-top: 18px;">
                     <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 13px;">
                         <div>
-                            <div style="color: var(--text-muted); margin-bottom: 2px;">Направление</div>
-                            <div style="font-weight: 600;">Web-разработка</div>
-                        </div>
-                        <div>
                             <div style="color: var(--text-muted); margin-bottom: 2px;">Фокус</div>
-                            <div style="font-weight: 600;">UX + код</div>
+                            <div style="font-weight: 600;">Web-интерфейсы</div>
                         </div>
                         <div>
-                            <div style="color: var(--text-muted); margin-bottom: 2px;">Инструменты</div>
+                            <div style="color: var(--text-muted); margin-bottom: 2px;">Подход</div>
+                            <div style="font-weight: 600;">UX + структура</div>
+                        </div>
+                        <div>
+                            <div style="color: var(--text-muted); margin-bottom: 2px;">Стек</div>
                             <div style="font-weight: 600;">HTML · CSS · JS · Git</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Правая карточка-акцент -->
-            <div class="hero-side card card-gradient">
-                <p class="pill">Активный проект</p>
-                <h2 class="card-title">Личный портфолио-сайт</h2>
-                <p class="card-text">
-                    Небольшой сайт в блочном стиле: несколько разделов, адаптивный layout,
-                    аккуратная типографика и развёртывание на GitHub Pages.
-                </p>
-                <ul class="card-list">
-                    <li>Современный блочный дизайн и мягкие тени</li>
-                    <li>Разделы «Главная», «О себе», «Проекты»</li>
-                    <li>SEO-теги и структурированный код</li>
-                </ul>
-            </div>
+            <!-- ПРАВАЯ ЧАСТЬ: твоё фото + карточка-описание сайта -->
+            <aside class="hero-aside">
+                <!-- Фото -->
+                <div class="hero-photo-card">
+                    <div class="hero-photo-tag">Это я</div>
+                    <div class="hero-photo-ring">
+                        <div class="hero-photo-ring-inner">
+                            <img src="avatar.JPG" alt="Фото разработчика">
+                        </div>
+                    </div>
+                    <div class="hero-photo-meta">
+                        <p><strong>Поливаев Дмитрий</strong></p>
+                        <p>Web-разработчик · интерфейсы и структура</p>
+                    </div>
+                </div>
+
+                <!-- Карточка про текущий сайт -->
+                <div class="card card-gradient">
+                    <p class="pill">Активный проект</p>
+                    <h2 class="card-title">Личный портфолио-сайт</h2>
+                    <p class="card-text">
+                        Небольшой сайт-портфолио в блочном стиле: несколько страниц,
+                        аккуратный дизайн, адаптивный layout и развёртывание на GitHub Pages.
+                    </p>
+                    <ul class="card-list">
+                        <li>Современный блочный дизайн и мягкие тени</li>
+                        <li>Разделы «Главная», «О себе», «Проекты»</li>
+                        <li>SEO-теги и структурированный код</li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </section>
 
-    <!-- БЛОК 2: Три больших блока-навыка -->
+    <!-- БЛОК 2: Три блока-навыка -->
     <section class="block block-muted">
         <div class="container block-inner">
             <header class="block-header">
                 <h2 class="block-title">Чем я занимаюсь</h2>
                 <p class="block-subtitle">
-                    Несколько ключевых направлений, вокруг которых строятся мои проекты.
+                    Основные направления работы, вокруг которых строятся мои учебные и боевые проекты.
                 </p>
             </header>
 
@@ -128,34 +269,34 @@
                 <article class="card card-soft">
                     <h3 class="card-title">Frontend</h3>
                     <p class="card-text">
-                        Верстаю чистые интерфейсы, продумываю блочную структуру страниц,
-                        использую Flexbox и Grid, делаю адаптивность для разных экранов.
+                        Верстаю интерфейсы на HTML5 и CSS3, использую Flexbox и Grid, делаю адаптив
+                        под разные устройства и аккуратные UI-паттерны.
                     </p>
                     <ul class="card-list" style="margin-top: 8px;">
-                        <li>Семантический HTML5</li>
-                        <li>Современный CSS3</li>
-                        <li>Аккуратная типографика</li>
+                        <li>Семантическая разметка</li>
+                        <li>Современный CSS</li>
+                        <li>Фокус на читабельности</li>
                     </ul>
                 </article>
 
                 <article class="card card-soft">
                     <h3 class="card-title">Логика и структура</h3>
                     <p class="card-text">
-                        Строю простую и понятную архитектуру в небольших проектах,
-                        разделяю ответственность, слежу за читаемостью кода и понятными именами.
+                        Строю простую архитектуру в небольших проектах, разделяю ответственность
+                        и слежу за тем, чтобы код было легко читать и дорабатывать.
                     </p>
                     <ul class="card-list" style="margin-top: 8px;">
-                        <li>Читаемый JS-код</li>
-                        <li>Минимальная сложность</li>
-                        <li>Файловая структура по смыслу</li>
+                        <li>Чистый JS-код</li>
+                        <li>Осмысленные имена</li>
+                        <li>Файлы по функционалу</li>
                     </ul>
                 </article>
 
                 <article class="card card-soft">
                     <h3 class="card-title">Git & GitHub</h3>
                     <p class="card-text">
-                        Работаю с ветками, pull-request’ами и код-ревью.
-                        Стараюсь вести историю коммитов так, чтобы в ней было легко ориентироваться.
+                        Работаю с ветками, pull-request’ами и код-ревью. Стараюсь вести историю коммитов так,
+                        чтобы она была понятной и для меня, и для команды.
                     </p>
                     <ul class="card-list" style="margin-top: 8px;">
                         <li>Понятные сообщения коммитов</li>
@@ -174,7 +315,7 @@
                 <div>
                     <h2 class="block-title">Как я веду проекты</h2>
                     <p class="block-subtitle">
-                        Простая последовательность шагов помогает делать работу предсказуемой.
+                        Простая последовательность шагов помогает оставаться собранным и предсказуемым.
                     </p>
                 </div>
             </header>
@@ -184,10 +325,10 @@
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
                         <div class="timeline-content">
-                            <h3>1. Определяю задачу</h3>
+                            <h3>1. Формулирую задачу</h3>
                             <p>
-                                Формулирую цель, целевую аудиторию и ограничивающие факторы:
-                                сроки, объём, окружение.
+                                Понимаю, кто пользователи, какая цель проекта, какие ограничения по срокам
+                                и функционалу, какие есть зависимости.
                             </p>
                         </div>
                     </div>
@@ -196,18 +337,18 @@
                         <div class="timeline-content">
                             <h3>2. Проектирую структуру</h3>
                             <p>
-                                Разбиваю интерфейс на блоки, продумываю навигацию, сценарии использования
-                                и базовую архитектуру кода.
+                                Разбиваю интерфейс на блоки, продумываю навигацию и сценарии —
+                                чтобы пользователю было понятно, а коду — удобно жить.
                             </p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
                         <div class="timeline-content">
-                            <h3>3. Реализую и довожу до polish</h3>
+                            <h3>3. Реализую и полирую</h3>
                             <p>
-                                Верстаю, пишу логику, проверяю адаптив и вычищаю мелочи:
-                                выравнивание, состояния элементов, историю коммитов.
+                                Верстаю, пишу логику, проверяю адаптив и вычищаю мелочи: состояния элементов,
+                                отступы, выравнивание и историю коммитов в Git.
                             </p>
                         </div>
                     </div>
